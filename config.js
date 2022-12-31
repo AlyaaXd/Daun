@@ -99,7 +99,7 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = 'Daunn BOT //Main Watermark
+global.wm = 'Daunn BOT' //Main Watermark
 global.wm2 = 'Daunn'
 global.wm3 = '⫹⫺ Daunn BOT'
 global.botdate = `⫹⫺ 𝗛𝗮𝗿𝗶: ${week} ${date}`
