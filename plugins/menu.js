@@ -12,39 +12,39 @@ const { makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromCon
 
 const defaultMenu = {
   before: `
-╭─────═[ INFO USER ]═─────⋆
+╭─────[ INFO USER ]─────⬡
 │╭───────────────···
-┴│☂︎ *Name:* %name
-⬡│☂︎ *Tag:* %tag
-⬡│☂︎ *Premium:* %prems
-⬡│☂︎ *Limit:* %limit
-⬡│☂︎ *Money:* %money
-⬡│☂︎ *Role:* %role
-⬡│☂︎ *Level:* %level [ %xp4levelup Xp For Levelup]
-⬡│☂︎ *Xp:* %exp / %maxexp
-┬│☂︎ *Total Xp:* %totalexp
+┴│⎔*Name:* %name
+├│⎔*Tag:* %tag
+├│⎔*Premium:* %prems
+├│⎔*Limit:* %limit
+├│⎔*Money:* %money
+├│⎔*Role:* %role
+├│⎔*Level:* %level [ %xp4levelup Xp For Levelup]
+├│⎔*Xp:* %exp / %maxexp
+┬│⎔*Total Xp:* %totalexp
 │╰────────────────···
-┠─────═[ TODAY ]═─────⋆
+┠──────[ TODAY ] ──────⬡
 │╭────────────────···
 ┴│    *${ucapan()} %name!*
-⬡│☂︎ *Tanggal:* %week %weton
-⬡│☂︎ *Date:* %date
-⬡│☂︎ *Tanggal Islam:* %dateIslamic
-┬│☂︎ *Waktu:* %time
+├│⎔*Tanggal:* %week %weton
+├│⎔*Date:* %date
+├│⎔*Tanggal Islam:* %dateIslamic
+┬│⎔*Waktu:* %time
 │╰────────────────···
-┠─────═[ INFO BOT ]═─────⋆
+┠──────[ INFO BOT ]──────⬡
 │╭────────────────···
-┴│☂︎ *Nama Bot:* %me
-⬡│☂︎ *Mode:* %mode
-⬡│☂︎ *Prefix:* [ *%_p* ]
-⬡│☂︎ *Baileys:* Multi Device
-⬡│☂︎ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-⬡│☂︎ *Platform:* %platform
-⬡│☂︎ *Type:* Node.Js
-⬡│☂︎ *Uptime:* %muptime
-┬│☂︎ *Database:* %rtotalreg dari %totalreg
+┴│⎔*Nama Bot:* %me
+├│⎔*Mode:* %mode
+├│⎔*Prefix:* [ *%_p* ]
+├│⎔*Baileys:* Multi Device
+├│⎔*Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+├│⎔*Platform:* %platform
+├│⎔*Type:* Node.Js
+├│⎔*Uptime:* %muptime
+┬│⎔*Database:* %rtotalreg dari %totalreg
 │╰────────────────···
-╰──────────═┅═──────────
+╰──────────┅────────⬡
 
 ⃝▣──「 *INFO CMD* 」───⬣
 │ *Ⓟ* = Premium
@@ -52,9 +52,9 @@ const defaultMenu = {
 ▣────────────⬣
 %readmore
 `.trimStart(),
-  header: '⃝▣──「 %category 」───⬣',
-  body: '│○ %cmd %isPremium %islimit',
-  footer: '▣───────────⬣\n',
+  header: '⃝⬣──「 %category 」───⎔',
+  body: '│● %cmd %isPremium %islimit',
+  footer: '⬣───────────⎔\n',
   after: `%c4 %me`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
@@ -301,9 +301,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
   },
 ]
 
-let tek = `✧────···[ Dashboard ]···────✧
+let tek = `⬡────···[ Dashboard ]···────⬡
 *${ucapan()} ${conn.getName(m.sender)}*
-╭━━━━━━━━━━━━━━━━┈─✧
+╭━━━━━━━━━━━━━━⬡
 ┴
 │⬡ Aktif selama ${mpt}
 │⬡ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
@@ -312,19 +312,19 @@ let tek = `✧────···[ Dashboard ]···────✧
 │⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 │⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ┬
-├━━━━━━━━━━━━━━━━┈─⋆
-│ ▸ *ᴀᴜᴛʜᴏʀ :* ʙᴏᴄʜɪʟɢᴀᴍɪɴɢ
-┴ ▸ *ᴏᴡɴᴇʀ :* ɪᴍ-ʏᴀɴxɪᴀᴏ
-✧
+├━━━━━━━━━━━━━━━⬡
+│ ▸ *ᴀᴜᴛʜᴏʀ :* Daunn
+┴ ▸ *ᴏᴡɴᴇʀ :* Im AlyaaXd 
+⬡
 ┬ 📌 𝗣𝗶𝗻𝗻𝗲𝗱 :
-│ ʙᴇʀɪ ᴊᴇᴅᴀ ʏᴀʜ ᴋᴀᴋ ^ω^
-╰━━━━━━━━━━━━━━━━┈─◂`
+│ ʙᴇʀɪ ᴊᴇᴅᴀ ʏᴀʜ ᴋᴀᴋ 
+╰━━━━━━━━━━━━━━⬡`
 const listMessage = {
   text: tek,
   footer: wm2,
   mentions: await conn.parseMention(tek),
   title: ``,
-  buttonText: `Klik Disini ⎙`, 
+  buttonText: `Klik Disini `, 
   sections
 }
   if (teks == '404') {
@@ -511,7 +511,7 @@ const listMessage = {
     let d6 = 'application/zip'
     let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     
-   //~~~Source : https://github.com/Rlxfly
+   //~~~Source : https://github.com/AlyaaXd 
     //------- MENU LOCATION
     /*const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
   degreesLatitude: 34.672314,
